@@ -2,7 +2,7 @@
 
 ## DiM-TS Architecture
 
-
+![image](https://github.com/yzh8221/DiMTS/blob/master/Figure/DiMTS_Main.pdf)
 
 ## Running the Code
 
