@@ -51,7 +51,15 @@ python main.py --name {name} --config_file {config.yaml} --gpu 0 --sample 0 --mi
 If you find this repo useful, please cite our paper!
 
 ~~~bash
-
+@misc{yao2025dimtsbridgegapselective,
+      title={DiM-TS: Bridge the Gap between Selective State Space Models and Time Series for Generative Modeling}, 
+      author={Zihao Yao and Jiankai Zuo and Yaying Zhang},
+      year={2025},
+      eprint={2511.18312},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2511.18312}, 
+}
 ~~~
 
 ## Code
