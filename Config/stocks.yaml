@@ -1,0 +1,94 @@
+model:
+  target: Models.interpretable_diffusion.gaussian_diffusion.DiM_TS
+  params:
+    seq_length: 64
+    feature_size: 6
+    n_layer_enc: 2
+    n_layer_dec: 2
+    d_model: 64  # 4 X 16
+    timesteps: 500
+    sampling_timesteps: 500
+    loss_type: 'l2'
+    beta_schedule: 'cosine'
+    n_heads: 4
+    mlp_hidden_times: 4
+    attn_pd: 0.0
+    resid_pd: 0.0
+    kernel_size: 1
+    padding_size: 0
+
+    # DiMTS
+
+    # correlation loss weight
+    mmd_alpha: 0.0008
+    # Fourier loss weight
+    l_loss: 1.0
+    sample_type: 'batch'
+    hidden_size: 128
+    n_encoder: 1
+    n_decoder: 3
+    feature_last: True
+    input_shape: [64,6]
+    mlp_ratio: 4.0
+    # latent state dimension of Mamba
+    d_state: 1
+    d_conv: 3
+    model_type: 'DiM'
+    # dilated convolutions scale [1, 2, 3]
+    conv_num: 1
+
+solver:
+  base_lr: 1.0e-4
+  max_epochs: 70000
+  results_folder: ./Checkpoints_stock
+  gradient_accumulate_every: 2
+  save_cycle: 10000  # max_epochs // 10
+  ema:
+    decay: 0.995
+    update_interval: 10
+  
+  scheduler:
+    target: engine.lr_sch.ReduceLROnPlateauWithWarmup
+    params:
+      factor: 0.5
+      patience: 10000
+      min_lr: 1.0e-4
+      threshold: 1.0e-1
+      threshold_mode: rel
+      warmup_lr: 8.0e-3
+      warmup: 3000
+      verbose: False
+
+dataloader:
+  train_dataset:
+    target: Utils.Data_utils.real_datasets.CustomDataset
+    params:
+      name: stock
+      proportion: 1.0  # Set to rate < 1 if training conditional generation
+      data_root: ./Data/datasets/stock_data.csv
+      window: 64  # seq_length
+      save2npy: True
+      neg_one_to_one: True
+      seed: 123
+      period: train
+
+  test_dataset:
+    target: Utils.Data_utils.real_datasets.CustomDataset
+    params:
+      name: stock
+      proportion: 0.9  # rate
+      data_root: ./Data/datasets/stock_data.csv
+      window: 64  # seq_length
+      save2npy: True
+      neg_one_to_one: True
+      seed: 123
+      period: test
+      style: separate
+      distribution: geometric
+    coefficient: 1.0e-2
+    step_size: 5.0e-2
+    sampling_steps: 200
+
+  batch_size: 64
+  sample_size: 256
+  shuffle: True

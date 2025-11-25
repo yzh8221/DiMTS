@@ -1,0 +1,8 @@
+# ninja log v5
+0	26118	1744887342858675338	/home/yzh/Diffusion/SpatialMamba/kernels/dwconv2d/build/temp.linux-x86_64-cpython-310/dwconv2d.o	7212d9e978b2c1de
+0	104920	1744887421649676693	/home/yzh/Diffusion/SpatialMamba/kernels/dwconv2d/build/temp.linux-x86_64-cpython-310/depthwise_fwd/launch.o	be64f666502df50c
+109	27519	1744888808219051326	/home/yzh/Diffusion/SpatialMamba/kernels/dwconv2d/build/temp.linux-x86_64-cpython-310/dwconv2d.o	7212d9e978b2c1de
+6	25114	1748337889325772546	/home/yaozh/diffusion/SpatialMamba/kernels/dwconv2d/build/temp.linux-x86_64-cpython-310/dwconv2d.o	7d48932e254503de
+6	105635	1748337969847652061	/home/yaozh/diffusion/SpatialMamba/kernels/dwconv2d/build/temp.linux-x86_64-cpython-310/depthwise_fwd/launch.o	44e105e863aaa0a2
+13	25521	1759471561280182656	/home/yah/AAAI/DIMTS/kernels/dwconv2d/build/temp.linux-x86_64-cpython-310/dwconv2d.o	6ab6c93f0822e45f
+13	105496	1759471641237744800	/home/yah/AAAI/DIMTS/kernels/dwconv2d/build/temp.linux-x86_64-cpython-310/depthwise_fwd/launch.o	744bed484381fd0a
