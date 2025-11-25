@@ -40,6 +40,9 @@ Please use the saved model for sampling by running
 ```bash
 python main.py --name {name} --config_file {config.yaml} --gpu 0 --sample 0 --milestone {checkpoint_number}
 ```
+## Channel Permutation Scanning
+
+[Laplace_Scanning.ipynb](https://github.com/YunMeiGongRen/GPS-Mamba/blob/main/Laplace_Scanning.ipynb) provides an example code of reproducing Permutation Scanning Algorithm. You can modify the content according to your dataset requirements.
 
 ## Code
 
