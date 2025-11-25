@@ -1,5 +1,7 @@
 # DiM-TS: Bridge the Gap between Selective State Space Models and Time Series for Generative Modeling
 
+The repo is the official implementation for the paper: https://arxiv.org/pdf/2511.18312
+
 ## DiM-TS Architecture
 
 ![image](https://github.com/yzh8221/DiMTS/blob/master/Figure/DiMTS_Main.png)
@@ -43,6 +45,14 @@ python main.py --name {name} --config_file {config.yaml} --gpu 0 --sample 0 --mi
 ## Channel Permutation Scanning
 
 [channel_permutation.ipynb](https://github.com/yzh8221/DiMTS/blob/master/channel_permutation.ipynb) provides an example code of reproducing Permutation Scanning Algorithm. You can modify the content according to your dataset requirements.
+
+## Citation
+
+If you find this repo useful, please cite our paper!
+
+~~~bash
+
+~~~
 
 ## Code
 
