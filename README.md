@@ -1,4 +1,4 @@
-# DiM-TS: DiM-TS: Bridge the Gap between Selective State Space Models and Time Series for Generative Modeling
+# DiM-TS: Bridge the Gap between Selective State Space Models and Time Series for Generative Modeling
 
 ## Running the Code
 
