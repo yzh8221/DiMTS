@@ -1,10 +1,14 @@
 # DiM-TS: Bridge the Gap between Selective State Space Models and Time Series for Generative Modeling
 
+## DiM-TS Architecture
+
+
+
 ## Running the Code
 
 The following instructions explain how to run the code. 
 
-### Environment & Libraries
+#### Environment & Libraries
 
 The full libraries list is provided as `requirements.txt`. Please create a virtual environment and run
 
@@ -21,7 +25,7 @@ cd kernels/selective_scan && pip install .
 cd kernels/dwconv2d && python3 setup.py install --user
 ~~~
 
-### Training
+#### Training
 
 For training, you can reproduce the experimental results by runing
 
@@ -36,3 +40,13 @@ Please use the saved model for sampling by running
 ```bash
 python main.py --name {name} --config_file {config.yaml} --gpu 0 --sample 0 --milestone {checkpoint_number}
 ```
+
+## Code
+
+Thanks for the open sources papers listed below which DiM-TS is build on.
+
+https://github.com/wmd3i/PaD-TS
+
+https://github.com/EdwardChasel/Spatial-Mamba
+
+https://github.com/Y-debug-sys/Diffusion-TS
